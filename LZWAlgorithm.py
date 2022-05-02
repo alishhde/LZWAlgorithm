@@ -1,4 +1,4 @@
-# Seyedali Shohadaalhosseini
+# Seyedali Shohadaalhosseini - alishhde
 from itertools import chain
 
 import matplotlib.pyplot
@@ -49,14 +49,16 @@ def LZWEncoding(dictTable, data, image=True):
                 if flag1:
                     try:
                         before = symbolToSearch
-                        symbolToSearch = symbolToSearch + "-" + "{}".format(eachLine[eachSymbolIndex+1])
+                        symbolToSearch = symbolToSearch + "-" + \
+                                         "{}".format(eachLine[eachSymbolIndex+1])
                     except IndexError:
                         pass
                     flag1 = False
                     flag2 = True
                 else:
                     try:
-                        symbolToSearch = "{}".format(eachLine[eachSymbolIndex]) + "-" + "{}".format(eachLine[eachSymbolIndex+1])
+                        symbolToSearch = "{}".format(eachLine[eachSymbolIndex]) + "-" + \
+                                         "{}".format(eachLine[eachSymbolIndex+1])
                     except IndexError:
                         symbolToSearch = "{}".format(eachLine[eachSymbolIndex])
                         pass
